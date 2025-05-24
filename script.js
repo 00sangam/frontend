@@ -1,39 +1,38 @@
+// Replace with your backend URL
 const socket = io("https://backend-0keh.onrender.com");
 
-let username = "";
+// Ask for username
+const username = prompt("Enter your name");
 
-const loginScreen = document.getElementById("login-screen");
-const chatScreen = document.getElementById("chat-screen");
-const loginBtn = document.getElementById("loginBtn");
-const usernameInput = document.getElementById("usernameInput");
-
+// Elements
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const messages = document.getElementById("messages");
 
-loginBtn.addEventListener("click", () => {
-  const name = usernameInput.value.trim();
-  if (name) {
-    username = name;
-    loginScreen.style.display = "none";
-    chatScreen.style.display = "block";
-  }
-});
-
+// Send message
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (input.value && username) {
+  if (input.value) {
     socket.emit("chat message", {
       user: username,
-      text: input.value
+      message: input.value
     });
     input.value = "";
   }
 });
 
+// Receive message
 socket.on("chat message", function (data) {
   const item = document.createElement("li");
-  item.textContent = `${data.user}: ${data.text}`;
+  item.classList.add("message");
+
+  if (data.user === username) {
+    item.classList.add("my-message");
+  } else {
+    item.classList.add("other-message");
+  }
+
+  item.textContent = `${data.user}: ${data.message}`;
   messages.appendChild(item);
   messages.scrollTop = messages.scrollHeight;
 });

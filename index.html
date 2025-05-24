@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chat App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Login Screen -->
-  <div id="login-screen">
-    <h2>Welcome to Chat App</h2>
-    <input type="text" id="usernameInput" placeholder="Enter your name" />
-    <button id="loginBtn">Join Chat</button>
-  </div>
-
-  <!-- Chat Screen -->
-  <div id="chat-screen" style="display: none;">
+  <div class="chat-container">
     <ul id="messages"></ul>
     <form id="form">
       <input id="input" autocomplete="off" placeholder="Type a message..." />
-      <button>Send</button>
+      <button>➤</button>
     </form>
   </div>
-
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
