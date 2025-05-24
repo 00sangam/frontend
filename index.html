@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat {
+  width: 400px;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #444;
+  margin-bottom: 10px;
+}
+
+#input {
+  width: 80%;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+}
+
+</style>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <h2>Welcome to Chat App</h2>
+    <input type="text" id="usernameInput" placeholder="Enter your name" />
+    <button id="loginBtn">Join Chat</button>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chat-screen" style="display: none;">
+    <ul id="messages"></ul>
+    <form id="form">
+      <input id="input" autocomplete="off" placeholder="Type a message..." />
+      <button>Send</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
