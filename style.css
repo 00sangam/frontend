@@ -1,4 +1,5 @@
 /* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -84,29 +85,32 @@ body {
   padding: 10px;
   overflow-y: auto;
   list-style: none;
-  background-color: #dcf8c6;
+  background-color: #000000;
+  font-family:"Playpen Sans Deva", cursive;;
 }
 
 .message {
   margin: 10px;
   padding: 10px 15px;
-  border-radius: 18px;
-  max-width: 75%;
+  border-radius: 10px;
+  max-width: 45%;
   word-wrap: break-word;
   font-size: 25px;
 }
 
 .my-message {
-  background-color: #dcf8c6;
+  background-color: oklch(40.5% 0.101 131.063);
   margin-left: auto;
   text-align: right;
+   color: oklch(87.2% 0.01 258.338)
 }
 
 .other-message {
-  background-color: #fff;
+  background-color: #434246;;
   margin-right: auto;
   text-align: left;
   border: 1px solid #ccc;
+  color: #f0f0f1;
 }
 
 form {
@@ -139,6 +143,20 @@ form button:hover {
   background-color: #075e54;
 }
 
+/* CSS: Add animation for swipe feedback */
+
+
+.message {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.message.reply-slide {
+  transform: translateX(50px);
+  background-color: #e6f7ff;
+}
+
+
 /* Responsive tweaks */
 @media screen and (max-width: 600px) {
   .chat-container,
@@ -154,7 +172,7 @@ form button:hover {
   }
 
   .message {
-    font-size: 20px;
+    font-size: 11px;
     padding: 8px 12px;
   }
 
