@@ -238,10 +238,12 @@ button:hover {
 }
 
 #loveMessage {
-  font-size: 2rem;
+  font-size: 6rem;
   color: #ff1a75;
   margin-top: 20px;
   transition: opacity 0.5s ease;
+  font-family:"Playpen Sans Deva", cursive;;
+
 }
 
 .hidden {
