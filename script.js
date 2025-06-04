@@ -76,15 +76,7 @@
 //     startX = 0;
 //   });
 // });
-const button = document.getElementById('showMessage');
-const message = document.getElementById('loveMessage');
-const heartsContainer = document.getElementById('heartsContainer');
 
-button.addEventListener('click', () => {
-  message.classList.remove('hidden');
-  message.classList.add('visible');
-  createHearts();
-});
 
 function createHearts() {
   for (let i = 0; i < 15; i++) {
@@ -101,5 +93,5 @@ function createHearts() {
   }
 }
 
-
+createHearts();
 
