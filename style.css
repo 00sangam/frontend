@@ -190,23 +190,34 @@ form button:hover {
     font-size: 1.5rem;
   }
 } */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #ffe6e6;
-  font-family: 'Playpen', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
+  min-height: 100vh;
   text-align: center;
   padding: 20px;
 }
 
+.container {
+  max-width: 90%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff0f5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #d6336c;
 }
 
@@ -219,6 +230,7 @@ button {
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  margin-top: 20px;
 }
 
 button:hover {
@@ -226,11 +238,10 @@ button:hover {
 }
 
 #loveMessage {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #ff1a75;
   margin-top: 20px;
   transition: opacity 0.5s ease;
-  font-family:"Playpen Sans Deva", cursive;;
 }
 
 .hidden {
@@ -256,5 +267,21 @@ button:hover {
   100% {
     transform: translateY(-200px) scale(1.5);
     opacity: 0;
+  }
+}
+
+/* Mobile-friendly font sizes */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  #loveMessage {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }
