@@ -1,6 +1,6 @@
 /* Reset and base styles */
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap');
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,10 +18,10 @@ body {
 /* General hidden utility */
 /* .hidden {
   display: none;
-} */
+}
 
 /* Welcome and username screens */
-/* .welcome-container,
+.welcome-container,
 .username-container {
   text-align: center;
   background-color: #ece5dd;
@@ -63,10 +63,10 @@ body {
 .welcome-container button:hover,
 .username-container button:hover {
   background-color: #075e54;
-} */
+}
 
 /* Chat container */
-/* .chat-container {
+.chat-container {
   width: 100%;
   max-width: 500px;
   background-color: #fff;
@@ -141,12 +141,12 @@ form button {
 
 form button:hover {
   background-color: #075e54;
-} */
+}
 
 /* CSS: Add animation for swipe feedback */
 
 
-/* .message {
+.message {
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -154,11 +154,11 @@ form button:hover {
 .message.reply-slide {
   transform: translateX(50px);
   background-color: #e6f7ff;
-} */
+}
 
 
 /* Responsive tweaks */
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .chat-container,
   .welcome-container,
   .username-container {
@@ -188,102 +188,5 @@ form button:hover {
   .welcome-container h1,
   .username-container h2 {
     font-size: 1.5rem;
-  }
-} */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #ffe6e6;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  text-align: center;
-  padding: 20px;
-}
-
-.container {
-  max-width: 90%;
-  width: 100%;
-  padding: 20px;
-  border-radius: 16px;
-  background-color: #fff0f5;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #d6336c;
-}
-
-button {
-  background-color: #ff4d88;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  margin-top: 20px;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-#loveMessage {
-  font-size: 6rem;
-  color: #ff1a75;
-  margin-top: 20px;
-  transition: opacity 0.5s ease;
-  font-family:"Playpen Sans Deva", cursive;;
-
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.heart {
-  position: absolute;
-  font-size: 24px;
-  color: #ff4d88;
-  animation: floatUp 3s linear forwards;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px) scale(1.5);
-    opacity: 0;
-  }
-}
-
-/* Mobile-friendly font sizes */
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  #loveMessage {
-    font-size: 1.5rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
   }
 }
